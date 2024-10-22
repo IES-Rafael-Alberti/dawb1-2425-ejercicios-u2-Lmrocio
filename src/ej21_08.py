@@ -5,7 +5,7 @@ Aceptable	0.4
 Meritorio	0.6 o más
 La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada por la puntuación del nivel.
 '''
-
+#CAMBIARLO A QUE SOLO ACEPTE VALORES ENTRE 0-1; SI ESTA ENTRE 0.0 Y 0.4 ES 0, SI ESTÁ ENTRE 0.4 Y 0.6 ES 0.4
 def datos_entrada():
     puntuacion = float(input("Introduzca su puntuación obtenida: "))
     return puntuacion
