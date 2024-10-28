@@ -28,7 +28,7 @@ def obtener_triangulo(num) -> str:
             cadena += str(i) + ' '
             triangulo += cadena[::-1] + '\n'
     else: 
-        for i in range(0, num +1, 2):
+        for i in range(0, num+1, 2):
             cadena += str(i) + ' '
             triangulo += cadena[::-1] + '\n'
 
