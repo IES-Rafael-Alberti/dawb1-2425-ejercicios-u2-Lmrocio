@@ -18,8 +18,8 @@ def comprobar_contrasena(contra):
                 raise NameError ("INCORRECT PASSWORD!!")
             else:
                 acierto = True
-        except ValueError as e:
-            print({e})
+        except NameError as e:
+            print(f"{e}")
 
 
 def main():

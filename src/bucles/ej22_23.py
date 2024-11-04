@@ -6,11 +6,8 @@ Por cada línea completa, informar cuántos dígitos numéricos (del 0 al 9) apa
 """
 
 def pedir_titulo() -> str:
-    try:
         titulo = input("Introduzca el título del libro: ")
         return titulo
-    except:
-        print("***ERROR*** El valor introducido es inválido.")
 
 
 def comprobar_digitos(titulo:str, digitos: int) -> int:

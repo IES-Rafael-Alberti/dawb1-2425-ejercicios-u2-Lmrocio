@@ -9,18 +9,18 @@ def pedir_edad():
             edad = int(input("Introduzca su edad: "))
             
             if edad < 0:
-                raise ValueError ("La edad debe ser un número positivo.")
+                raise NameError("La edad debe ser un número positivo.")
         
             elif edad == 0:
-                raise ValueError ("La edad debe ser superior a 1.")
+                raise NameError ("La edad debe ser superior a 1.")
             
             elif edad > 125:
-                raise ValueError ("La edad no puede ser mayor de ese número,¡pero enhorabuena, te conservas bien!")
+                raise NameError ("La edad no puede ser mayor de ese número,¡pero enhorabuena, te conservas bien!")
 
             else:    
                 valido = True
                 
-        except ValueError as e:
+        except NameError as e:
             print(f"***ERROR*** El valor introducido no es válido. {e}")
         
     return edad 

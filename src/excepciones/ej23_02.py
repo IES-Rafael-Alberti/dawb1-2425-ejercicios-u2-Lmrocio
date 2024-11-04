@@ -11,11 +11,11 @@ def pedir_num():
             num = int(input("Introduzca un número entero y positivo: "))
         
             if num < 0:
-                raise ValueError ("El número debe ser positivo.")
+                raise NameError("El número debe ser positivo.")
             else:
                 valido = True
         
-        except ValueError as e:
+        except NameError as e:
             print(f"***ERROR*** El valor ingresado es incorrecto. {e}")
 
     return num

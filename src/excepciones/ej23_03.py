@@ -15,9 +15,9 @@ def pedir_num():
             else:
                 valido = True
         
-        except ValueError as e:
+        except NameError as e:
             print(f"***ERROR*** El valor ingresado es incorrecto. {e}")
-
+    
     return num
 
 def cuenta_atras(num):

@@ -9,14 +9,14 @@ def pedir_opcion() -> int:
         opcion = int(input("Introduzca una opción: "))
         comprobar_opcion(opcion)
         return opcion
-    except ValueError as e:
-        print("***ERROR*** El valor introducido no es válido.")
+    except NameError as e:
+        print(f"***ERROR*** El valor introducido no es válido. {e}")
     
 
 
 def comprobar_opcion(opcion):
     if opcion <= 0 or opcion > 3:
-        raise ValueError("La opción selecionada no está disponible.") 
+        raise NameError("La opción selecionada no está disponible.") 
   
 
 
@@ -27,15 +27,15 @@ def mostrar_menu():
 def main():
     mostrar_menu()
     opcion = pedir_opcion()
-
-    while opcion !=3:
-        if opcion == 1:
-           print("Has eleigo la opción 1.")
-        elif opcion == 2:
-            print("Has elegido la opción 2.")
-        mostrar_menu()
-        opcion = pedir_opcion()
-    print("BYE BYE")
+    if opcion != None:
+        while opcion !=3:
+            if opcion == 1:
+                print("Has eleigo la opción 1.")
+            elif opcion == 2:
+                print("Has elegido la opción 2.")
+            mostrar_menu()
+            opcion = pedir_opcion()
+        print("BYE BYE")
 
 
 
