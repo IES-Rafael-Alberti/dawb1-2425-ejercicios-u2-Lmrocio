@@ -4,11 +4,11 @@ y muestre por pantalla todos los números impares desde 1 hasta ese número sepa
 '''
 
 
-def datos_entrada():
+def datos_entrada() -> int:
     num = int(input("Introduzca un número entero positivo: "))
     return num
 
-def crear_impares(num):
+def crear_impares(num: int) -> str:
     cadena = '1 '
     for i in range(2, num):
         resto = i%2

@@ -5,13 +5,16 @@ y muestre por pantalla la cuenta atrás desde ese número hasta cero separados p
 def pedir_num() -> int:
     try:
         num = int(input("Introduzca un número entero: "))
+        comprobar_num(num)   
         return num
-    except ValueError as e:
-        print(f"***ERROR*** El valor introducido no es válido. {e}")        
+    except NameError as e:
+        print(f"***ERROR*** El valor introducido no es válido. {e}")      
+        return None  
+    
 
 def comprobar_num(num: int):
     if num < 0:
-        raise ValueError ("El número debe ser positivo.")
+        raise NameError("El número debe ser positivo.")
 
 def crear_cadena(num) -> str:
     cadena = ""
@@ -23,9 +26,9 @@ def crear_cadena(num) -> str:
 
 def main():
     num = pedir_num()
-    comprobar_num(num)
-    cadena = crear_cadena(num)
-    print(f"Para el número {num}, la cuenta atrás sería: {cadena}.")
+    if num != None:
+        cadena = crear_cadena(num)
+        print(f"Para el número {num}, la cuenta atrás sería: {cadena}.")
 
 if __name__ == '__main__':
     main()

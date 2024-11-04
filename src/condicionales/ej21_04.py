@@ -2,12 +2,12 @@
 Escribir un programa que pida al usuario un número entero y muestre por pantalla si es par o impar.
 '''
 
-def pedir_num():
+def pedir_num() -> int:
     num = int(input("Introduzca un número: "))
     return num
 
 
-def comprobar_num(num):
+def comprobar_num(num: int) -> bool:
     if num%2 == 0:
         par = True
     else: 

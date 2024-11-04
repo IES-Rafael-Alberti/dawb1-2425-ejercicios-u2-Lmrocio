@@ -13,10 +13,11 @@ def datos_entrada() -> float:
         if 0.0 <= puntuacion <= 1.0:
             return puntuacion
         else:
-            raise ValueError("***ERROR*** No ha introducido un valor válido.")
+            raise ValueError("Debe ser un valor entre 0.0 a 1.0")
         
     except ValueError as e:
-        print(e)
+        print(f"***ERROR*** No ha introducido un valor válido. {e}.")
+    
 
     
 
@@ -41,9 +42,10 @@ def cantidad_dinero(puntuacion):
 
 def main():
     puntuacion = datos_entrada()
-    nivel = nivel_rendimiento(puntuacion)
-    cantidad = cantidad_dinero(puntuacion)
-    print(f"Su puntuación es de {puntuacion}, obteniendo el nivel de rendimiento {nivel} y será premiado con {cantidad} euros.")
+    if puntuacion != None:
+        nivel = nivel_rendimiento(puntuacion)
+        cantidad = cantidad_dinero(puntuacion)
+        print(f"Su puntuación es de {puntuacion}, obteniendo el nivel de rendimiento {nivel} y será premiado con {cantidad} euros.")
 
 
 if __name__ == '__main__':

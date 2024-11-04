@@ -4,11 +4,11 @@ el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar 
 Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€.
 '''
 
-def datos_entrada():
+def datos_entrada() -> int:
     edad = int(input("Introduzca su edad: "))
     return edad
 
-def precio_por_edad(edad):
+def precio_por_edad(edad: int) -> int:
     if edad < 4:
         precio = 0
     elif edad >= 4 and edad < 18:

@@ -7,16 +7,19 @@ def datos_entrada() -> int:
     return edad
 
 
-def mostrar_anos(edad):
+def crear_anos(edad: int):
+    cadena = ""
     for i in range(1, edad+1):
-        print(f"-{i}")
+        cadena += str(i) + " "
+    return cadena
 
         
 
 def main():
     edad = datos_entrada()
-    print("Usted ha cumplido los años: ")
-    mostrar_anos(edad)
+    cadena = crear_anos(edad)
+    print(f"Usted ha cumplido los años: {cadena}")
+    
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ def datos_entrada():
     return edad, ingresos
 
 
-def comprobar_edad(edad):
+def comprobar_edad(edad: int) -> bool:
     if edad >= 16:
         valor_edad = True
     else:
@@ -17,7 +17,7 @@ def comprobar_edad(edad):
     return valor_edad
 
 
-def comprobar_ingresos(ingresos):
+def comprobar_ingresos(ingresos: float) ->  bool:
     if ingresos >= 1000:
         valor_ingresos = True
     else:

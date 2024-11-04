@@ -2,11 +2,11 @@
 Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
 '''
 
-def datos_entrada():
+def datos_entrada() -> float:
     renta = float(input("Introduzca su renta anual: "))
     return renta
 
-def tipo_impositivo(renta):
+def tipo_impositivo(renta: float) -> str:
     if renta < 10000:
         tipo = '5%'
     elif renta >= 10000 and renta < 20000:

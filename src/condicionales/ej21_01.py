@@ -2,12 +2,12 @@
 Escribir un programa que pregunte al usuario su edad y muestre por pantalla si es mayor de edad o no.
 '''
 
-def pedir_edad():
+def pedir_edad() -> int:
     edad =int(input("Introduzca su edad: "))
     return edad
 
 
-def mostrar_edad(edad):
+def mostrar_edad(edad: int) -> str:
     if edad >= 18 and edad <= 100:
         return "GENIAL, eres mayor de edad."
     elif edad >=0  and edad < 18:

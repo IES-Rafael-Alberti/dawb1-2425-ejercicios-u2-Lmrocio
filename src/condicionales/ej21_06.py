@@ -10,7 +10,7 @@ def datos_entrada():
     return sexo, nombre
 
 
-def comprobar_sexo(sexo: str):
+def comprobar_sexo(sexo: str) -> bool:
     if sexo == 'mujer':
         valor_s = True
     if sexo == 'hombre':
@@ -18,7 +18,7 @@ def comprobar_sexo(sexo: str):
     return valor_s
 
 
-def comprobar_nombre(nombre: str):
+def comprobar_nombre(nombre: str) -> bool:
     antes_m = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm')
     despues_n = ('n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
     

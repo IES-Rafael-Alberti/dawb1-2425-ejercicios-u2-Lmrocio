@@ -5,7 +5,7 @@
 num = [8, 3, 1, 19, 14]
 
 
-def burbuja_hijo(num, i):
+def burbuja_hijo(num: list, i: int) -> list:
     """
     Esta función ordena los números de la lista num, reemplazando el valor de dos posiciones a la vez, si la segunda posición es mayor
     que la primera, en cada vuelta del bucle.
@@ -25,7 +25,7 @@ def burbuja_hijo(num, i):
     return num
 
 
-def burbuja_padre(num):
+def burbuja_padre(num: list) -> str:
     """
     Esta función crea la cadena ordenado con el resultado final de cada vuelta realizada en la función burbuja_hijo()
 
