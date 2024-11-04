@@ -8,7 +8,8 @@ def datos_entrada():
     num = int(input("Introduzca un número entero positivo: "))
     return num
 
-def mostrar_impares(num, cadena: str):
+def crear_impares(num):
+    cadena = '1 '
     for i in range(2, num):
         resto = i%2
         if resto != 0:
@@ -20,10 +21,9 @@ def mostrar_impares(num, cadena: str):
     return cadena
 
 def main():
-    cadena = '1 '
     num = datos_entrada()
     print(f"Para el número {num} encontramos los impares: ")
-    cadena = mostrar_impares(num, cadena)
+    cadena = crear_impares(num, cadena)
     if num%2 == 0:
         cadena += '.'
         print (cadena)

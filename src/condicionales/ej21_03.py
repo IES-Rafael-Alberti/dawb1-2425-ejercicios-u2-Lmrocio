@@ -11,7 +11,8 @@ def pedir_numeros():
 
 def division(num1: float, num2: float):
     div = num1/num2
-    print(f"La división entre el dividendo {num1} y el divisor {num2} da un cociente de {round(div, 3)}.")
+    return div
+    #print(f"La división entre el dividendo {num1} y el divisor {num2} da un cociente de {round(div, 3)}.")
 
 
 def  main():

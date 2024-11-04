@@ -9,16 +9,16 @@ def pedir_edad():
 
 def mostrar_edad(edad):
     if edad >= 18 and edad <= 100:
-        print("GENIAL, eres mayor de edad.")
+        return "GENIAL, eres mayor de edad."
     elif edad >=0  and edad < 18:
-        print("Lo siento, eres menor de edad.")
+        return "Lo siento, eres menor de edad."
     else:
-        print("Creo que esa no es tu verdadera edad.")
+        return "Creo que esa no es tu verdadera edad."
 
 
 def main():
     edad = pedir_edad()
-    mostrar_edad(edad)
+    print(mostrar_edad(edad))
 
 
 if __name__ == '__main__':
