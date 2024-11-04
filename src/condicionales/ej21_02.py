@@ -4,14 +4,14 @@ al usuario por la contraseña e imprima por pantalla si la contraseña introduci
 con la guardada en la variable sin tener en cuenta mayúsculas y minúsculas
 '''
 
-def pedir_contrasenas():
+def pedir_contrasenas() -> str:
     contrasena = input("Introduzca una contraseña: ")
     segunda_contrasena = input("Introduzca la contraseña de nuevo: ")
     return contrasena, segunda_contrasena
 
 
 
-def comprobar_contrasenas(contrasena: str, segunda_contrasena: str):
+def comprobar_contrasenas(contrasena: str, segunda_contrasena: str) -> bool:
     contrasena = contrasena.upper()
     segunda_contrasena = segunda_contrasena.upper()
 
@@ -25,6 +25,7 @@ def comprobar_contrasenas(contrasena: str, segunda_contrasena: str):
 
 def main():
     contrasena, segunda_contrasena = pedir_contrasenas()
+    
     if comprobar_contrasenas(contrasena, segunda_contrasena):
         print("¡CORRECTO!, has introducido la contraseña.")
     else:

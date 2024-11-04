@@ -22,7 +22,7 @@ def mostrar_impares(num, cadena: str):
 def main():
     cadena = '1 '
     num = datos_entrada()
-    print(f"Para el número {num} encontramos los primos: ")
+    print(f"Para el número {num} encontramos los impares: ")
     cadena = mostrar_impares(num, cadena)
     if num%2 == 0:
         cadena += '.'

@@ -21,15 +21,15 @@ def datos_entrada() -> int:
 
 
 def obtener_triangulo(num) -> str:
-    cadena = ''
-    triangulo = ''
+    cadena = ""
+    triangulo = ""
     if num%2 != 0:
         for i in range(1, num+1, 2):
-            cadena += str(i) + ' '
+            cadena += str(i)[::-1] + " "
             triangulo += cadena[::-1] + '\n'
     else: 
         for i in range(0, num+1, 2):
-            cadena += str(i) + ' '
+            cadena += str(i)[::-1] + ' '
             triangulo += cadena[::-1] + '\n'
 
     return triangulo

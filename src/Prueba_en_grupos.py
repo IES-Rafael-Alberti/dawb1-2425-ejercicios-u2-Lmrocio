@@ -13,13 +13,13 @@ def datos_entrada(num_maximo) -> int:
 def comprobar_num(num, num_maximo):
     if num < 0:
         raise ValueError ("Debe ser un número positivo")
-    elif num > num_maximo:
+    if num > num_maximo:
         raise ValueError (f"Debe estar en el rango 1-{num_maximo}")
-    elif num is False:
+    if not str(num).isdigit():
         raise ValueError ("Debe ser un número")
 
 
-def hacer_fila_1(num: int, i:int) -> str:
+def hacer_fila_1(i:int) -> str:
     fila = ""
     final = i + 1
     suma = 0
@@ -45,7 +45,7 @@ def hacer_piramide_1(num: int) -> str:
     return piramide1
 
 
-def hacer_fila_2(num: int, j: int) -> str:
+def hacer_fila_2(j: int) -> str:
     fila = ""
     suma = 0
     for j in range(j, -1, -1):
